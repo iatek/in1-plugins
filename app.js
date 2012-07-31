@@ -11,7 +11,7 @@ var app = express.createServer(
 app.configure( function () {
     app.set('views', __dirname + '/views');
 	app.set('view engine', 'ejs');
-    app.set('view options', { layout: true }); 
+    app.set('view options', { layout: 'layout.ejs' }); 
 	app.use("/public", express.static(__dirname + '/public'));
 	app.use("/styles", express.static(__dirname + '/styles'));
 	app.use("/scripts", express.static(__dirname + '/scripts'));
