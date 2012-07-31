@@ -18,7 +18,7 @@ app.configure( function () {
 });
 
 app.get('/', function (req, res) {
-	res.render('home');
+	res.render('index');
 });
 
 app.get('/l', function (req, res) {
