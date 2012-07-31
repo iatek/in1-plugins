@@ -1,6 +1,6 @@
 var express = require('express'),
-	plugins = require('./plugins'),
-    request = require('request');
+	plugins = require('./plugins');
+    //request = require('request');
 
 var app = express.createServer(
     express.bodyParser(),
