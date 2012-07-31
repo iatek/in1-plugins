@@ -1,4 +1,5 @@
 var express = require('express'),
+ejs = require('ejs'),
 	plugins = require('./plugins');
     //request = require('request');
 
@@ -18,7 +19,7 @@ app.configure( function () {
 });
 
 app.get('/', function (req, res) {
-	res.render('index');
+	ejs.render('index');
 });
 
 app.get('/l', function (req, res) {
