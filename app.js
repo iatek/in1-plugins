@@ -1,5 +1,4 @@
 var express = require('express'),
-ejs = require('ejs'),
 	plugins = require('./plugins');
     //request = require('request');
 
@@ -11,12 +10,12 @@ var app = express.createServer(
 app.configure( function () {
     app.set('views', __dirname + '/views');
 	app.set('view engine', 'ejs');
-    app.set('view options', { layout: __dirname + '/views/layout.ejs' }); 
+    app.set('view options', { layout:'layout.ejs' }); 
+     app.use(app.router);
 	app.use("/public", express.static(__dirname + '/public'));
 	app.use("/styles", express.static(__dirname + '/styles'));
 	app.use("/scripts", express.static(__dirname + '/scripts'));
 	app.use("/images", express.static(__dirname + '/images'));
-    app.use(app.router);
 });
 
 app.get('/', function (req, res) {
