@@ -1,5 +1,5 @@
 var express = require('express');
-	//plugins = require('./plugins');
+	plugins = require('./plugins');
     //request = require('request');
 
 var app = express.createServer(
