@@ -4,7 +4,7 @@
   "author": "Iatek",
   "dependencies": {
     "express": ">=2.6.x",
-    "ejs": ">=0.6.x",
+    "ejs": ">=0.7.x",
     "request": ">=2.9.x"
   },
   "engines": {
