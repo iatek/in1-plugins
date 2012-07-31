@@ -1,0 +1,82 @@
+<div class="container-fluid">
+
+<div class="hero-unit">
+	<h1>jQuery Socialist</h1>
+	<h6>Create a single social media stream from multiple social networks</h6>
+</div>
+
+<p>
+jQuery Socialist is a jquery plugin that creates a social stream (or social "wall") from multiple social media feeds in one place.
+Use it to pull content from Facebook pages, Twitter, LinkedIn, YouTube and other social networks...
+</p>
+
+<div class="well">
+	<h3>Features</h3>
+	<ul>
+    <li>Aggregates social feeds from <a href='#facebook'>Facebook</a>, <a href='#twitter'>Twitter</a>, LinkedIn, YouTube, Tumblr, Pinterest, RSS Feeds, Craigslist, Google+ and more..</li>
+    <li>Multiple themes and responsive style</li>
+    <li>Easy to implement with <A href='http://jquery.com'>jQuery</a> and a few lines of code!</li>
+	</ul>
+	<h3 title="Use it on your Website or Blog to...">Use Cases</h3>
+	<ul>
+	<li><a href=''>Show updates from multiple social networks in attractive visual layouts</li>
+	<li><a href=''>Display Instagram photos in Pinterest-style layouts</a></li>
+    <li><a href=''>Combine and display Facebook, Twitter and LinkedIn updates</a></li>
+    <li><a href=''>Show YouTube video thumbnails</a></li>
+    <li><a href=''>Display Craiglist postings for an area and/or category</a></li>
+    <li><a href=''>Visualize any RSS feed as a responsive social wall</a></li>
+	</ul>
+</div>
+	
+<a href='//iatek.github.com/jquery-socialist' class='btn btn-large btn-info'>Download from GitHub</a>
+
+<hr/>
+
+<h1>Screenshots</h1>
+
+<hr/>
+
+<h1>Demos</h1>
+
+<hr/>
+
+<h1>Installation &amp; Usage</h1>
+	
+    <p>
+    1) Simply include the .js and .css files in your HTML document..
+    </p>
+	<pre>
+    &lt;link href="jquery.socialist.css" rel="stylesheet" /&gt;
+    &lt;script src="jquery.socialist.js"&gt;&lt;/script&gt;
+	</pre>
+	<p>
+    2) Apply jQuery Socialist to any &lt;div&gt; element within your js code..
+	</p>
+	<pre>
+    $('#content').socialist({
+        networks: [
+            {name:'linkedin',id:'buddy-media'},
+            {name:'facebook',id:'in1dotcom'},
+            {name:'pinterest',id:'potterybarn'},
+            {name:'twitter',id:'in1dotcom'},
+            {name:'googleplus',id:'105588557807820541973/posts'},
+            {name:'rss',id:' http://feeds.feedburner.com/good/lbvp'},
+            {name:'craigslist',id:'boo',areaName:'southcoast'}
+        ]
+    });
+	</pre>
+
+<h3>Dependencies</h3>
+
+	<p>
+    <b>jQuery Socialist uses 2 plugins to provide the responsive layout and cross-domain ajax features:</b>
+	</p>
+	<p>
+    <ul>
+	<li>jQuery Isotope Plugin v1.5.19: An exquisite jQuery plugin for magical layouts (http://isotope.metafizzy.co)</li>
+    <li>jQuery Cross Domain Ajax: http://james.padolsey.com/javascript/cross-domain-requests-with-jquery/</li>
+	</ul>
+	</p>
+
+<hr/>
+</div>
