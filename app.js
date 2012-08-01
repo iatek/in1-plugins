@@ -1,9 +1,9 @@
 var express = require('express'),
 	plugins = require('./plugins');
-    //request = require('request');
 
 var app = express.createServer(
-    express.bodyParser()
+    express.bodyParser(),
+    express.cookieParser()
 );
 
 app.configure( function () {
@@ -21,6 +21,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/socialist', plugins.socialist);
+app.get('/socialist/demo', plugins.socialist.demo);
 
 var port = process.env.PORT || 3001;
 app.listen(port);
