@@ -226,10 +226,12 @@
                     if (fields.indexOf('text')!=-1 || fields.indexOf('image')!=-1) {
                         $contentDiv.appendTo(container);            
                     }
-                                                   
+                                       
+                    /*
                     if (fields.indexOf('share')!=-1){
                         $shareDiv.appendTo(container);
                     }
+                    */
                     
                     $source.appendTo($footDiv);
                     if (fields.indexOf('source')!=-1){
@@ -242,8 +244,7 @@
                     }
                     
                     if (fields.indexOf('date')!=-1){
-                        $dateSpan.text(itemObj.date);                            
-                        //$dateSpan.appendTo($source);
+                        $dateSpan.text(itemObj.date);                   
                         $dateSpan.appendTo($sourceLnkDiv);
                     }
                     
