@@ -1,40 +1,114 @@
 <div class="container-fluid">
 
+<!--
+<script src="/scripts/jquery.socialist.js" type="text/javascript" language="JavaScript"></script>
+<link rel="stylesheet" href="/scripts/jquery.socialist.css" type="text/css" />-->
+<script src="https://raw.github.com/iatek/jquery-socialist/master/jquery.socialist.js" type="text/javascript" language="JavaScript"></script>
+<link rel="stylesheet" href="https://raw.github.com/iatek/jquery-socialist/master/jquery.socialist.css" type="text/css" />
+<script type="text/javascript" language="JavaScript">
+$(document).ready(function () {
+
+$('#demo1').socialist({
+    networks: [
+        {name:'facebook',id:'in1dotcom'},
+        {name:'tumblr',id:'iatek'},
+        {name:'pinterest',id:'potterybarn/Fall-Weddings-by-Pottery-Barn'},
+        {name:'youtube',id:'potterybarn'},
+        {name:'googleplus',id:'105588557807820541973/posts'},
+        {name:'rss',id:' http://feeds.feedburner.com/good/lbvp'}
+    ],
+    maxResults:2
+});
+
+$('#demo2').socialist({
+    networks: [
+        {name:'craigslist',id:'boo',areaName:'southcoast'}
+    ],
+    isotope:true,
+    random:false,
+    fields:['source','heading','date','text','image']
+});
+
+$('#demo3').socialist({
+    networks: [
+        {name:'linkedin',id:'buddy-media'},
+        {name:'facebook',id:'in1dotcom'},
+        {name:'twitter',id:'in1dotcom'}
+    ],
+    maxResults:4
+});
+
+
+});
+</script>
+
+
 <div class="hero-unit">
 	<h1>jQuery Socialist Demos</h1>
 	<h6>Create a single social media stream from multiple social networks</h6>
 </div>
 
 <p>
-jQuery Socialist is a jquery plugin that creates a social stream (or social "wall") from multiple social media feeds in one place.
+<a href='/socialist' title='jQuery social media aggregate plugin'>jQuery Socialist</a> is a jquery social plugin that creates a social stream (or social "wall") from multiple social media feeds in one place.
 Use it to pull content from Facebook pages, Twitter, LinkedIn, YouTube and other social networks...
 </p>
-
-<div class="well">
-	<h3>Demos</h3>
-	<ul>
-	<li><a href='#basic'>Show updates from multiple social networks in attractive visual layouts</li>
-	<li><a href='#instagram'>Display Instagram photos in Pinterest-style layouts</a></li>
-    <li><a href='#social'>Combine and display Facebook, Twitter and LinkedIn updates</a></li>
-    <li><a href='#youtube'>Show YouTube video thumbnails</a></li>
-    <li><a href='#craiglist'>Display Craiglist postings for an area and/or category</a></li>
-    <li><a href='#rss'>Visualize any RSS feed as a responsive social wall</a></li>
-	</ul>
-</div>
+<p>
+	<h1>Demos</h1>
+	<dl class="dl-horizontal">
+	<dt>Basic</dt><dd><a href='#basic'>Socialist aggregates feeds from multiple social networks</a></dd>
+	<dt>Instagram Only</dt><dd><a href='#instagram'>Display Instagram photos in Pinterest-style layouts</a></dd>
+    <dt>The Big Three</dt><dd><a href='#social'>Combine and display Facebook, Twitter and LinkedIn updates</a></dd>
+    <dt>YouTube</dt><dd><a href='#youtube'>Show YouTube video thumbnails</a></dd>
+    <dt>Craigslist</dt><dd><a href='#craigslist'>Display Craiglist postings for an area and/or category</a></dd>
+    <dt>Visual RSS</dt><dd><a href='#rss'>Visualize any RSS feed as a responsive social wall</a></dd>
+	<dt>Custom List</dt><dd><a href='#list'>Multiple social media updates in a single list</a></dd>
+	</dl>
+</p>
 	
 <a href='//iatek.github.com/jquery-socialist' class='btn btn-large btn-info'>Download from GitHub</a>
 
 <hr/>
 
-<h1>jQuery Socialist</h1>
-
-<div></div>
-
+<h1 id="basic">Display Content from Multiple Social Media Feeds</h1>
+<div id="demo1"></div>
 <hr/>
 
-<h1>Demos</h1>
-
+<h1 id="instagram">Display Instagram Photos in Pinterest-style Layout</h1>
+<div id="demo2"></div>
 <hr/>
 
+<h1 id="social">Combine Facebook, Twitter and LinkedIn</h1>
+<div id="demo3"></div>
 <hr/>
+
+<h1 id="youtube">Create a Wall of YouTube Video Thumbnails</h1>
+<div id="demo4"></div>
+<hr/>
+
+<h1 id="craigslist">As a jQuery Craigslist Plugin</h1>
+<div id="demo5"></div>
+<hr/>
+
+<h1 id="rss">As a Visual RSS Plugin for jQuery</h1>
+<div id="demo6"></div>
+<hr/>
+
+<h1 id="rss">A Simple Customized List of Social Updates</h1>
+<div id="demo7"></div>
+<hr/>
+
+<p>
+	<h1>Options</h1>
+	<dl class="dl-horizontal">
+	<dt></dt><dd></dd>
+	<dt></dt><dd></dd>
+    <dt></dt><dd></dd>
+    <dt></dt><dd></dd>
+    <dt></dt><dd></dd>
+    <dt></dt><dd></dd>
+	<dt></dt><dd></dd>
+	</dl>
+</p>
+
+
 </div>
