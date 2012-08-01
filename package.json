@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "author": "Iatek",
   "dependencies": {
-    "express": ">=2.6.x",
-    "ejs": ">=0.8.x"
+    "express": ">=2.5.x",
+    "ejs": ">=0.6.x"
   },
   "engines": {
     "node": "0.6.x"

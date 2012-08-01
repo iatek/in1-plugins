@@ -1,0 +1,113 @@
+info it worked if it ends with ok
+verbose cli [ '/var/lib/stickshift/7e0c429dbd7d4ec7ac54c808863df024/app-root/data//bin/node-openshift',
+verbose cli   '/usr/bin/npm',
+verbose cli   'install',
+verbose cli   'express',
+verbose cli   '2.5.x' ]
+info using npm@1.1.24
+info using node@v0.6.19
+verbose /var/lib/stickshift/7e0c429dbd7d4ec7ac54c808863df024/app-root/data//bin/node-openshift node symlink
+verbose config file /var/lib/stickshift/7e0c429dbd7d4ec7ac54c808863df024/app-root/data/.npmrc
+verbose config file /var/lib/stickshift/7e0c429dbd7d4ec7ac54c808863df024/app-root/data/etc/npmrc
+verbose config file /usr/lib/node_modules/npm/npmrc
+verbose caching /var/lib/stickshift/7e0c429dbd7d4ec7ac54c808863df024/app-root/data/246923/package.json
+verbose loadDefaults in1-plugins@0.0.1
+verbose caching /var/lib/stickshift/7e0c429dbd7d4ec7ac54c808863df024/app-root/data/246923/node_modules/ejs/package.json
+verbose from cache /var/lib/stickshift/7e0c429dbd7d4ec7ac54c808863df024/app-root/data/246923/package.json
+verbose readDependencies: using package.json deps
+verbose cache add [ 'express@>=2.5.x', null ]
+silly cache add: name, spec, args [ undefined, 'express@>=2.5.x', [ 'express@>=2.5.x', null ] ]
+verbose parsed url { pathname: 'express@', path: 'express@', href: 'express@' }
+silly cache add: name, spec, args [ 'express', '>=2.5.x', [ 'express', '>=2.5.x' ] ]
+verbose parsed url { pathname: '=2.5.x', path: '=2.5.x', href: '=2.5.x' }
+verbose addNamed [ 'express', '>=2.5.x' ]
+verbose addNamed [ null, '>=2.5.0-' ]
+silly name, range, hasData [ 'express', '>=2.5.0-', false ]
+verbose cache add [ '2.5.x', null ]
+silly cache add: name, spec, args [ undefined, '2.5.x', [ '2.5.x', null ] ]
+verbose parsed url { pathname: '2.5.x', path: '2.5.x', href: '2.5.x' }
+verbose addNamed [ '2.5.x', '' ]
+verbose addNamed [ null, '' ]
+silly name, range, hasData [ '2.5.x', '', false ]
+verbose raw, before any munging 2.5.x
+verbose url resolving [ 'https://registry.npmjs.org/', './2.5.x' ]
+verbose url resolved https://registry.npmjs.org/2.5.x
+http GET https://registry.npmjs.org/2.5.x
+verbose raw, before any munging express
+verbose url resolving [ 'https://registry.npmjs.org/', './express' ]
+verbose url resolved https://registry.npmjs.org/express
+verbose etag "4X4D59AJJH4C71FUYUS81O5C3"
+http GET https://registry.npmjs.org/express
+http 304 https://registry.npmjs.org/express
+silly get cb [ 304,
+silly get cb   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+silly get cb     etag: '"4X4D59AJJH4C71FUYUS81O5C3"',
+silly get cb     date: 'Wed, 01 Aug 2012 00:01:52 GMT',
+silly get cb     'content-length': '0' } ]
+verbose etag express from cache
+silly name, range, hasData 2 [ 'express', '>=2.5.0-', true ]
+silly versions [ 'express',
+silly versions   [ '0.14.0',
+silly versions     '0.14.1',
+silly versions     '1.0.0beta',
+silly versions     '1.0.0beta2',
+silly versions     '1.0.0rc',
+silly versions     '1.0.0rc2',
+silly versions     '1.0.0rc3',
+silly versions     '1.0.0rc4',
+silly versions     '1.0.0',
+silly versions     '1.0.1',
+silly versions     '1.0.2',
+silly versions     '1.0.3',
+silly versions     '1.0.4',
+silly versions     '1.0.5',
+silly versions     '1.0.6',
+silly versions     '1.0.7',
+silly versions     '2.5.0',
+silly versions     '2.5.1',
+silly versions     '2.5.2',
+silly versions     '2.5.3',
+silly versions     '2.5.4',
+silly versions     '2.5.5',
+silly versions     '2.5.6',
+silly versions     '2.5.7',
+silly versions     '2.5.8',
+silly versions     '2.5.9',
+silly versions     '3.0.0alpha1',
+silly versions     '3.0.0alpha2',
+silly versions     '3.0.0alpha3',
+silly versions     '3.0.0alpha4',
+silly versions     '3.0.0alpha5',
+silly versions     '3.0.0beta1',
+silly versions     '3.0.0beta2',
+silly versions     '3.0.0beta3',
+silly versions     '2.5.10',
+silly versions     '3.0.0beta4',
+silly versions     '2.5.11',
+silly versions     '3.0.0beta6',
+silly versions     '3.0.0beta7',
+silly versions     '3.0.0rc1' ] ]
+verbose bin dist [ '0.6-ares1.7.5-DEV-evundefined-openssl1.0.0-fips-v83.6.6.25-linux-x64-2.6.32-279.2.1.el6.x86_64',
+verbose bin dist   { shasum: 'b96bc45e19a0fece6b4c26c297db2f958a50643a',
+verbose bin dist     tarball: 'http://registry.npmjs.org/express/-/express-3.0.0rc1.tgz' } ]
+http 404 https://registry.npmjs.org/2.5.x
+silly get cb [ 404,
+silly get cb   { server: 'CouchDB/1.2.0 (Erlang OTP/R15B)',
+silly get cb     date: 'Wed, 01 Aug 2012 00:01:52 GMT',
+silly get cb     'content-type': 'application/json',
+silly get cb     'content-length': '52',
+silly get cb     'cache-control': 'must-revalidate' } ]
+ERR! 404 '2.5.x' is not in the npm registry.
+ERR! 404 You should bug the author to publish it
+ERR! 404 Note that you can also install from a
+ERR! 404 tarball, folder, or http url, or git url.
+ERR! 
+ERR! System Linux 2.6.32-279.2.1.el6.x86_64
+ERR! command "/var/lib/stickshift/7e0c429dbd7d4ec7ac54c808863df024/app-root/data//bin/node-openshift" "/usr/bin/npm" "install" "express" "2.5.x"
+ERR! cwd /var/lib/stickshift/7e0c429dbd7d4ec7ac54c808863df024/app-root/data/246923
+ERR! node -v v0.6.19
+ERR! npm -v 1.1.24
+ERR! code E404
+ERR! message 404 Not Found: 2.5.x
+ERR! errno {}
+verbose exit [ 1, true ]
