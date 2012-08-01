@@ -333,7 +333,7 @@
                     preProcessor: null,
                     preCondition: "true"}
                 },
-                tumblr:{url:'http://iatek.tumblr.com/api/read/json?callback=helpers.cb&limit=|num|',dataType:"jsonp",parser:{
+                tumblr:{url:'http://iatek.tumblr.com/api/read/json?callback=helpers.cb&num=|num|',dataType:"jsonp",parser:{
                     name: "tumblr",
                     resultsSelector: "data.posts",
                     heading: "tumblr",
