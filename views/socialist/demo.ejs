@@ -24,6 +24,7 @@ $('#demo2').socialist({
     ],
     isotope:true,
     random:false,
+	maxResults:15,
     fields:['source','heading','date','text','image']
 });
 
@@ -33,9 +34,45 @@ $('#demo3').socialist({
         {name:'facebook',id:'in1dotcom'},
         {name:'twitter',id:'in1dotcom'}
     ],
-    maxResults:4
+    maxResults:3
 });
 
+$('#demo4').socialist({
+    networks: [
+        {name:'youtube',id:'potterybarn'}
+    ],
+	maxResults:16,
+	fixed:true
+});
+
+$('#demo5').socialist({
+    networks: [
+        {name:'craigslist',id:'boo',areaName:'southcoast'}
+    ],
+	maxResults:16
+});
+
+$('#demo6').socialist({
+    networks: [
+        {name:'rss',id:' http://feeds.feedburner.com/good/lbvp'},
+		{name:'rss',id:'http://www.houzz.com/getGalleries/featured/out-rss'}
+    ],
+	maxResults:6
+});
+
+$('#demo7').socialist({
+    networks: [
+        {name:'facebook',id:'in1dotcom'},
+        {name:'tumblr',id:'iatek'},
+        {name:'youtube',id:'potterybarn'},
+        {name:'googleplus',id:'105588557807820541973/posts'},
+        {name:'rss',id:' http://feeds.feedburner.com/good/lbvp'}
+    ],
+    isotope:false,
+    random:false,
+	maxResults:2,
+    fields:['source','heading']
+});
 
 });
 </script>
@@ -58,42 +95,40 @@ Use it to pull content from Facebook pages, Twitter, LinkedIn, YouTube and other
     <dt>The Big Three</dt><dd><a href='#social'>Combine and display Facebook, Twitter and LinkedIn updates</a></dd>
     <dt>YouTube</dt><dd><a href='#youtube'>Show YouTube video thumbnails</a></dd>
     <dt>Craigslist</dt><dd><a href='#craigslist'>Display Craiglist postings for an area and/or category</a></dd>
-    <dt>Visual RSS</dt><dd><a href='#rss'>Visualize any RSS feed as a responsive social wall</a></dd>
+    <dt>Visual RSS</dt><dd><a href='#rss'>Visualize RSS feeds in a responsive social wall</a></dd>
 	<dt>Custom List</dt><dd><a href='#list'>Multiple social media updates in a single list</a></dd>
 	</dl>
 </p>
 	
 <a href='//iatek.github.com/jquery-socialist' class='btn btn-large btn-info'>Download from GitHub</a>
 
-<hr/>
-
-<h1 id="basic">Display Content from Multiple Social Media Feeds</h1>
+<h2 id="basic">Combine Content from Multiple Social Media Feeds</h2>
 <div id="demo1"></div>
-<hr/>
+<br/>
 
-<h1 id="instagram">Display Instagram Photos in Pinterest-style Layout</h1>
+<h2 id="instagram">Display Instagram Photos in Pinterest-style Layout</h2>
 <div id="demo2"></div>
-<hr/>
+<br/>
 
-<h1 id="social">Combine Facebook, Twitter and LinkedIn</h1>
+<h2 id="social">Combine Facebook, Twitter and LinkedIn Updates</h2>
 <div id="demo3"></div>
-<hr/>
+<br/>
 
-<h1 id="youtube">Create a Wall of YouTube Video Thumbnails</h1>
+<h2 id="youtube">Create a Wall of YouTube Video Thumbnails</h2>
 <div id="demo4"></div>
-<hr/>
+<br/>
 
-<h1 id="craigslist">As a jQuery Craigslist Plugin</h1>
+<h2 id="craigslist">Use Socialist as a jQuery Craigslist Plugin</h2>
 <div id="demo5"></div>
-<hr/>
+<br/>
 
-<h1 id="rss">As a Visual RSS Plugin for jQuery</h1>
+<h2 id="rss">Use Socialist As a Visual RSS Plugin for jQuery</h2>
 <div id="demo6"></div>
-<hr/>
+<br/>
 
-<h1 id="rss">A Simple Customized List of Social Updates</h1>
+<h2 id="rss">Create a Customized List of Social Updates</h2>
 <div id="demo7"></div>
-<hr/>
+<br/>
 
 <p>
 	<h1>Options</h1>
