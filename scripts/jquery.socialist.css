@@ -165,7 +165,7 @@
     width: auto;
 }
 .socialist-simple .content {
-    min-height:auto !important;
+    min-height:1px;
     border:0;
 }
 
