@@ -260,9 +260,9 @@
                     */
                     
                     $source.appendTo($footDiv);
-                    if (fields.indexOf('source')!=-1){
-                        $sourceLnk.text(itemObj.heading);
-                        $sourceLnk.appendTo($sourceLnkDiv);                                                                                     
+                    $sourceLnk.text(itemObj.heading);
+                    $sourceLnk.appendTo($sourceLnkDiv);
+                    if (fields.indexOf('source')!=-1){                                                                                     
                         $sourceLnkDiv.appendTo($source);
                         $apiSpanLnk.appendTo($apiSpan);
                         $apiSpan.appendTo($footDiv);
