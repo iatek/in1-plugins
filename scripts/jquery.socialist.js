@@ -25,7 +25,6 @@
                         visible = $element.is(":visible"),
                         element = this;
                     
-                    // hide if visible
                     if (visible) {
                         $element.hide();
                     }
@@ -59,7 +58,7 @@
                                 $element.isotope ({
                                      animationEngine: 'jquery'
                                 });
-                                if (visible) {
+                                if (visible && settings.autoShow) {
                                     $element.show();
                                 }
                                 if (settings.random){
@@ -247,7 +246,7 @@
                     $dateSpan = $('<div class="date"/>'),
                     $footDiv = $('<div class="foot"/>');
                     
-                    console.log(itemObj.img.src);
+                    //console.log(itemObj.img.src);
 
                     if (fields.indexOf('image')!=-1 && itemObj.img.src){                                   
                         $img.appendTo($imgLnk);
@@ -255,7 +254,7 @@
                     }
                     
                     if (fields.indexOf('text')!=-1 || typeof itemObj.img.src==="undefined" ){
-                        $contentDivInner.appendTo($contentDiv);
+                         $contentDivInner.appendTo($contentDiv);
                     }
                     
                     if (fields.indexOf('text')!=-1 || fields.indexOf('image')!=-1) {
@@ -280,7 +279,6 @@
                     else {
                         $sourceLnk.appendTo($contentDivInner);
                     }
-                    
                     
                     if (fields.indexOf('date')!=-1){
                         $dateSpan.text(itemObj.date);                            
@@ -566,7 +564,8 @@
         isotope: true,
         headingLength: 31,
         textLength: 160,
-        maxResults:7,
+        maxResults: 7,
+        autoShow: true,
         fields:['source','heading','text','date','image','followers','likes','share']
     }
 

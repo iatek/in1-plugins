@@ -39,31 +39,31 @@ $('#demo3').socialist({
     maxResults:3,
     theme:'clean'
 });
-$('#demo3').hide();
 
 $('#demo4').socialist({
     networks: [
         {name:'youtube',id:'potterybarn'}
     ],
 	maxResults:12,
-	fixed:true
+	fixed:true,
+    autoShow:false
 });
-$('#demo4').hide();
 
 $('#demo5').socialist({
     networks: [
         {name:'craigslist',id:'boo',areaName:'southcoast'}
     ],
-	maxResults:12
+	maxResults:12,
+    autoShow:false
 });
-$('#demo5').hide();
 
 $('#demo6').socialist({
     networks: [
         {name:'rss',id:' http://feeds.feedburner.com/good/lbvp'},
 		{name:'rss',id:'http://www.houzz.com/getGalleries/featured/out-rss'}
     ],
-	maxResults:6
+	maxResults:6,
+    autoShow:false
 });
 
 $('#demo7').socialist({
