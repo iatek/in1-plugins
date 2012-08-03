@@ -22,8 +22,13 @@
                 // each instance of this plugin
                 return this.each(function() {
                     var $element = $(this),
+                        visible = $element.is(":visible"),
                         element = this;
                     
+                    // hide if visible
+                    if (visible) {
+                        $element.hide();
+                    }
                     
                     // loop each network
                     networks.forEach(function(item) {
@@ -47,8 +52,6 @@
                            queue[i].children().appendTo($element);
                         }
                         
-                        $element.children().hide();
-                        
                         // load isotope?
                         if (settings.isotope) {
                             $element.imagesLoaded(function(){
@@ -56,14 +59,18 @@
                                 $element.isotope ({
                                      animationEngine: 'jquery'
                                 });
-                                $element.children().show();
+                                if (visible) {
+                                    $element.show();
+                                }
                                 if (settings.random){
                                     $element.isotope( 'shuffle', function(){} );
                                 }
                             });
                         }
                         else {
-                            $element.children().show();
+                            if (visible) {
+                                $element.show();
+                            }
                         }
                         
                     },function(){
