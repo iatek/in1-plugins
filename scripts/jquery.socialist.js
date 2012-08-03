@@ -115,6 +115,11 @@
                                 $div.addClass('socialist-simple'); 
                             }
                             
+                            
+                            if (settings.width) {
+                                $div.css('width',settings.width); 
+                            }
+                            
                             //console.log(item);
                                             
                             if (apiParser.headingSelector!==null){
