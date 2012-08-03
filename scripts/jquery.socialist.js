@@ -22,10 +22,8 @@
                 // each instance of this plugin
                 return this.each(function() {
                     var $element = $(this),
-                        visible = $element.is(":visible")&&!$element.hasClass('collapse'),
+                        visible = $element.is(":visible"),
                         element = this;
-                    
-                    console.log('visible'+visible);
                     
                     // hide if visible
                     if (visible) {
