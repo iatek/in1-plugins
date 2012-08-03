@@ -40,21 +40,25 @@ $('#demo3').socialist({
     theme:'clean'
 });
 
-$('#demo4').socialist({
-    networks: [
-        {name:'youtube',id:'potterybarn'}
-    ],
-	maxResults:12,
-	fixed:true,
-    autoShow:false
+$('#youtube').click(function(){
+    $('#demo4').socialist({
+        networks: [
+            {name:'youtube',id:'potterybarn'}
+        ],
+    	maxResults:12,
+    	fixed:true,
+        autoShow:false
+    });
 });
 
-$('#demo5').socialist({
-    networks: [
-        {name:'craigslist',id:'boo',areaName:'southcoast'}
-    ],
-	maxResults:12,
-    autoShow:false
+$('#craigslist').click(function(){
+    $('#demo5').socialist({
+        networks: [
+            {name:'craigslist',id:'boo',areaName:'southcoast'}
+        ],
+    	maxResults:12,
+        autoShow:false
+    });
 });
 
 $('#demo6').socialist({
@@ -85,10 +89,12 @@ $('#demo7').socialist({
     fields:['text']
 });
 
+/*
 $('h2').click(function(){
     $(this).next('div').show();
     return false;
 });
+*/
 
 });
 </script>
