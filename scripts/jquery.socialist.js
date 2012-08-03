@@ -24,7 +24,6 @@
                     var $element = $(this),
                         element = this;
                     
-                    $element.hide();
                     
                     // loop each network
                     networks.forEach(function(item) {
@@ -48,6 +47,8 @@
                            queue[i].children().appendTo($element);
                         }
                         
+                        $element.children().hide();
+                        
                         // load isotope?
                         if (settings.isotope) {
                             $element.imagesLoaded(function(){
@@ -55,14 +56,14 @@
                                 $element.isotope ({
                                      animationEngine: 'jquery'
                                 });
-                                $element.show();
+                                $element.children().show();
                                 if (settings.random){
                                     $element.isotope( 'shuffle', function(){} );
                                 }
                             });
                         }
                         else {
-                            $element.show();
+                            $element.children().show();
                         }
                         
                     },function(){
