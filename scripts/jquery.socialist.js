@@ -268,6 +268,10 @@
                         $apiSpan.appendTo($footDiv);
                         $source.appendTo($footDiv);                                                                                        
                     }
+                    else {
+                        $sourceLnk.appendTo($contentDiv);
+                    }
+                    
                     
                     if (fields.indexOf('date')!=-1){
                         $dateSpan.text(itemObj.date);                            
