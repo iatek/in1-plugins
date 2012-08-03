@@ -232,7 +232,7 @@
                     $apiSpan = $('<div class="api"></div>'),
                     $apiSpanLnk = $('<a href="'+itemObj.img.href+'"><img src="https://c9.io/skelly/jquery-socialist/workspace/images/spacer.gif"></a>'),
                     $contentDiv = $('<div class="content"/>'),
-                    $contentDivInner = $('<div>'+itemObj.txt+'</div>'),
+                    $contentDivInner = $('<div>'+itemObj.txt+' </div>'),
                     $imgLnk = $('<a href="'+itemObj.img.href+'" title="'+itemObj.link.title+'"></a>'),
                     $img = $('<image src="'+itemObj.img.src+'" alt="'+helpers.stripHtml(itemObj.img.alt)+'">'),
                     $shareDiv = $('<div class="share"><a href="#" title='+itemObj.api+'>fb</a>|<a href="#" class="x">tw</a></div>'),
