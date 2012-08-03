@@ -25,6 +25,8 @@
                         visible = $element.is(":visible"),
                         element = this;
                     
+                    console.log('visible'+visible);
+                    
                     // hide if visible
                     if (visible) {
                         $element.hide();
