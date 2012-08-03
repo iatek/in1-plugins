@@ -61,7 +61,7 @@
                                 $element.isotope ({
                                      animationEngine: 'jquery'
                                 });
-                                if (visible) {
+                                if (visible && !$element.hasClass('collapse')) {
                                     $element.show();
                                 }
                                 if (settings.random){
