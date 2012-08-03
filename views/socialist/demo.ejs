@@ -10,6 +10,7 @@ $('#demo1').socialist({
     networks: [
         {name:'facebook',id:'in1dotcom'},
         {name:'tumblr',id:'iatek'},
+        {name:'twitter',id:'onsocialmedia'},
         {name:'pinterest',id:'potterybarn/Fall-Weddings-by-Pottery-Barn'},
         {name:'youtube',id:'potterybarn'},
         {name:'googleplus',id:'105588557807820541973/posts'},
@@ -30,17 +31,21 @@ $('#demo2').socialist({
 });
 */
 
-$('#demo3').socialist({
-    networks: [
-        {name:'linkedin',id:'buddy-media'},
-        {name:'facebook',id:'in1dotcom'},
-        {name:'twitter',id:'in1dotcom'}
-    ],
-    maxResults:3,
-    theme:'clean'
+$('#social').click(function(){
+    $('#demo3').socialist({
+        networks: [
+            {name:'linkedin',id:'buddy-media'},
+            {name:'facebook',id:'in1dotcom'},
+            {name:'twitter',id:'in1dotcom'}
+        ],
+        maxResults:3,
+        theme:'clean'
+    });
+    return false;
 });
 
 $('#youtube').click(function(){
+    $('#demo4').empty();
     $('#demo4').socialist({
         networks: [
             {name:'youtube',id:'potterybarn'}
@@ -52,6 +57,7 @@ $('#youtube').click(function(){
 });
 
 $('#craigslist').click(function(){
+    $('#demo5').empty();
     $('#demo5').socialist({
         networks: [
             {name:'craigslist',id:'boo',areaName:'southcoast'}
@@ -61,39 +67,39 @@ $('#craigslist').click(function(){
     return false;
 });
 
-$('#demo6').socialist({
-    networks: [
-        {name:'rss',id:' http://feeds.feedburner.com/good/lbvp'},
-		{name:'rss',id:'http://www.houzz.com/getGalleries/featured/out-rss'}
-    ],
-	maxResults:6
-});
-
-$('#demo7').socialist({
-    networks: [
-        {name:'tumblr',id:'iatek'},
-        {name:'youtube',id:'potterybarn'},
-        {name:'googleplus',id:'105588557807820541973/posts'},
-        {name:'rss',id:' http://feeds.feedburner.com/good/lbvp'}
-    ],
-    isotope:false,
-    random:false,
-	maxResults:2,
-    theme:'clean',
-    headingLength:60,
-    textLength:200,
-    width:280,
-    border:'1px',
-    margin:'2px',
-    fields:['text']
-});
-
-/*
-$('h2').click(function(){
-    $(this).next('div').show();
+$('#rss').click(function(){
+    $('#demo6').socialist({
+        networks: [
+            {name:'rss',id:' http://feeds.feedburner.com/good/lbvp'},
+    		{name:'rss',id:'http://www.houzz.com/getGalleries/featured/out-rss'}
+        ],
+    	maxResults:6
+    });
     return false;
 });
-*/
+
+$('#custom').click(function(){
+    $('#demo7').socialist({
+        networks: [
+            {name:'tumblr',id:'iatek'},
+            {name:'youtube',id:'potterybarn'},
+            {name:'googleplus',id:'105588557807820541973/posts'},
+            {name:'rss',id:' http://feeds.feedburner.com/good/lbvp'}
+        ],
+        isotope:false,
+        random:false,
+    	maxResults:2,
+        theme:'clean',
+        headingLength:60,
+        textLength:200,
+        width:280,
+        border:'1px',
+        margin:'2px',
+        fields:['text']
+    });
+    return false;
+});
+
 
 });
 </script>
