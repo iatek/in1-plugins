@@ -24,6 +24,8 @@
                     var $element = $(this),
                         element = this;
                     
+                    $element.hide();
+                    
                     // loop each network
                     networks.forEach(function(item) {
                         // get network settings
@@ -33,6 +35,7 @@
                         // replace params in request url
                         reqUrl = reqUrl.replace("|id|",item.id);
                         reqUrl = reqUrl.replace("|areaName|",item.areaName);
+                        reqUrl = reqUrl.replace("|apiKey|",item.apiKey);
                         reqUrl = reqUrl.replace("|num|",settings.maxResults);
                         // add to array for processing
                         processList.push(helpers.doRequest(reqUrl,nw.dataType,nw.cb,nw.parser,settings));
@@ -40,7 +43,7 @@
                     
                     // process the array of requests, then add resulting elements to container element
                     $.when.apply($, processList).then(function(){
-                                
+       
                         for (var i = 0; i < queue.length; i++) {
                            queue[i].children().appendTo($element);
                         }
@@ -52,17 +55,19 @@
                                 $element.isotope ({
                                      animationEngine: 'jquery'
                                 });
-                                
+                                $element.show();
                                 if (settings.random){
                                     $element.isotope( 'shuffle', function(){} );
                                 }
                             });
                         }
+                        else {
+                            $element.show();
+                        }
+                        
                     },function(){
                         console.log('some requests failed.');
                     });
-                    
-                    //$element.isotope('shuffle',function(){})
                     
                 }); // end plugin instance
             }
@@ -74,7 +79,7 @@
                 var container=$('<div></div>');
                 //console.log(JSON.stringify(data));
                                                    
-                apiParser.resultsSelector = apiParser.resultsSelector.replace('|num|',settings.maxResults);             
+                apiParser.resultsSelector = apiParser.resultsSelector.replace('|num|',settings.maxResults);          
                     
                 $.each(eval(apiParser.resultsSelector), function(i,item) {
                     
@@ -104,6 +109,10 @@
                             
                             if (settings.size) {
                                  $div.addClass('socialist-'+settings.size);   
+                            }
+                            
+                            if (!settings.isotope) {
+                                $div.addClass('socialist-simple'); 
                             }
                             
                             //console.log(item);
@@ -139,6 +148,7 @@
                                     imgSrc="";
                                 }
                             }
+
                             
                             // image link
                             if (apiParser.imgHrefSelector===null){
@@ -226,8 +236,8 @@
                     if (fields.indexOf('text')!=-1 || fields.indexOf('image')!=-1) {
                         $contentDiv.appendTo(container);            
                     }
-                                       
-                    /*
+                
+                /* TODO: implement sharing links
                     if (fields.indexOf('share')!=-1){
                         $shareDiv.appendTo(container);
                     }
@@ -244,7 +254,7 @@
                     }
                     
                     if (fields.indexOf('date')!=-1){
-                        $dateSpan.text(itemObj.date);                   
+                        $dateSpan.text(itemObj.date);                            
                         $dateSpan.appendTo($sourceLnkDiv);
                     }
                     
@@ -350,8 +360,22 @@
                     preCondition: "true"}
                 
                 },
-                digg:{url:'http://digg.com/',img:''},
-                googleplus:{url:'https://plus.google.com/|id|',img:'',dataType:'text',parser:{
+                digg:{url:'http://digg.com/'},
+                flickr:{url:'http://api.flickr.com/services/rest/?extras=tags%2Cdescription%2Cdate_upload&nojsoncallback=1&api_key=|apiKey|&method=flickr.people.getPublicPhotos&format=json&per_page=|num|&user_id=|id|',dataType:'json',parser:{
+                    name: "flickr",
+                    resultsSelector: "data.photos.photo",
+                    heading: "Flickr",
+                    headingSelector: "item.title",
+                    dateSelector: "new Date(item.dateupload)",
+                    txtSelector: "(item.description._content)||item.tags",
+                    imgSrcSelector: "'http://farm' + item.farm + '.staticflickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_n.jpg'",
+                    imgHrefSelector: "\"http://flickr.com/photos/\" + item.owner + \"/\" + item.id + \"\"",
+                    imgAltSelector: "item.title",
+                    imgSrcProcessor: null,
+                    preCondition: "true"
+                   }
+                },
+                googleplus:{url:'https://plus.google.com/|id|',dataType:'text',parser:{
                     name: "google",
                     resultsSelector:"$(data.responseText).find('div.zg:lt(|num|)')",
                     heading: "Google+",
@@ -365,9 +389,6 @@
                     link: "#",
                     preProcessor: null,
                     preCondition: "true"}
-                },
-                instagram:{url:'',dataType:'json',img:{},parser:{                 
-                    }
                 },
                 pinterest:{url:'http://pinterest.com/|id|/',dataType:"text",parser:{
                     name: "pinterest",
