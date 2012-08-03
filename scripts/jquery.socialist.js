@@ -232,6 +232,7 @@
                     $apiSpan = $('<div class="api"></div>'),
                     $apiSpanLnk = $('<a href="'+itemObj.img.href+'"><img src="https://c9.io/skelly/jquery-socialist/workspace/images/spacer.gif"></a>'),
                     $contentDiv = $('<div class="content"/>'),
+                    $contentDivInner = $('<div>'+itemObj.txt+'</div>'),
                     $imgLnk = $('<a href="'+itemObj.img.href+'" title="'+itemObj.link.title+'"></a>'),
                     $img = $('<image src="'+itemObj.img.src+'" alt="'+helpers.stripHtml(itemObj.img.alt)+'">'),
                     $shareDiv = $('<div class="share"><a href="#" title='+itemObj.api+'>fb</a>|<a href="#" class="x">tw</a></div>'),
@@ -246,7 +247,7 @@
                     }
                     
                     if (fields.indexOf('text')!=-1 || typeof itemObj.img.src==="undefined" ){
-                        $('<div>'+itemObj.txt+'</div>').appendTo($contentDiv);
+                        $contentDivInner.appendTo($contentDiv);
                     }
                     
                     if (fields.indexOf('text')!=-1 || fields.indexOf('image')!=-1) {
@@ -261,15 +262,15 @@
                     
                     $source.appendTo($footDiv);
                     $sourceLnk.text(itemObj.heading);
-                    $sourceLnk.appendTo($sourceLnkDiv);
-                    if (fields.indexOf('source')!=-1){                                                                                     
+                    if (fields.indexOf('source')!=-1){
+                        $sourceLnk.appendTo($sourceLnkDiv);
                         $sourceLnkDiv.appendTo($source);
                         $apiSpanLnk.appendTo($apiSpan);
                         $apiSpan.appendTo($footDiv);
                         $source.appendTo($footDiv);                                                                                        
                     }
                     else {
-                        $sourceLnk.appendTo($contentDiv);
+                        $sourceLnk.appendTo($contentDivInner);
                     }
                     
                     
