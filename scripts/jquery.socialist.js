@@ -115,9 +115,20 @@
                                 $div.addClass('socialist-simple'); 
                             }
                             
-                            
                             if (settings.width) {
                                 $div.css('width',settings.width); 
+                            }
+                            
+                            if (settings.margin) {
+                                $div.css('margin',settings.margin); 
+                            }
+                            
+                            if (settings.border) {
+                                $div.css('border',settings.border); 
+                            }
+                            
+                            if (settings.padding) {
+                                $div.css('padding',settings.padding); 
                             }
                             
                             //console.log(item);
