@@ -22,7 +22,7 @@
                 // each instance of this plugin
                 return this.each(function() {
                     var $element = $(this),
-                        visible = $element.is(":visible"),
+                        visible = $element.is(":visible")&&!$element.hasClass('collapse'),
                         element = this;
                     
                     console.log('visible'+visible);
@@ -61,7 +61,7 @@
                                 $element.isotope ({
                                      animationEngine: 'jquery'
                                 });
-                                if (visible && !$element.hasClass('collapse')) {
+                                if (visible) {
                                     $element.show();
                                 }
                                 if (settings.random){
