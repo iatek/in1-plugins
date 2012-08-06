@@ -1,10 +1,58 @@
 <div class="container-fluid">
 
-    <div class="hero-unit">
-        <h1>jQuery Social Media Plugins</h1>
-    </div>
+        <style>
+        .carousel-inner {}
+        .carousel-inner .item {
+        position:relative;
+        z-index:0;
+        text-transform:uppercase;
+        }
+        .carousel-inner .item img {
+        z-index:1;
+        width:100%;
+        }
+        .carousel-inner .item span {
+        background-color:#333;
+        opacity:.7;filter:Alpha(Opacity=7);
+        position:absolute;
+        padding:20px;
+        top:250px;z-index:4;
+        color:#fff;font-size:12pt;line-height:21px;
+        width:95%;
+        height:50px;
+        }
+        .carousel-inner .item div {
+        position:absolute;
+        padding:14px;
+        top:1px;
+        z-index:4;
+        color:#fff;
+        font-size:17pt;
+        }
+        #carouselNav {
+        top:210px;
+        padding:3px;
+        position:absolute;
+        z-index:5;
+        width:99%;
+        }
+        </style>
+        <div class="hero-unit hero-unit-dark" style="max-height:330px;padding:0;overflow:hidden;">
+        <div id="homeCarousel" class="carousel">
+        	<div class="carousel-inner">
+        		<div class="item active"><div>jQuery Socialist</div><img src='/images/socialist/ss1.png' style="z-index:-1;"><span>Combine multiple social media feeds into a single beautiful layout.</span></div>
+        		<div class="item"><div>jQuery Share</div><img src='/images/socialist/ss3.png'><span></span></div>
+        		<div class="item"><div>jQueryUI Switchr</div><img src='/images/socialist/ss3.png'><span></span></div>
+        	</div>
+        	<div id="carouselNav">
+        	<a class="carousel-control left" href="#homeCarousel" data-slide="prev">&lsaquo;</a>
+        	<a class="carousel-control right" href="#homeCarousel" data-slide="next">&rsaquo;</a>
+        	</div>
+        </div>
+        </div>
     
     <h3>Social Plugins for sharing, posting and combining social feeds to and from multiple social networks</h3>
+    <br/><br/>
     
     <p>
     <img title='Create a Stream from Facebook Pages' src='/scripts/images/32/facebook-32x32.png' /> 
@@ -18,6 +66,7 @@
     <img title='jQuery Flickr Plugin' src='/scripts/images/32/flickr-32x32.png' /> 
     <img title='jQuery RSS Plugin' src='/scripts/images/32/rss-32x32.png' />
     </p>
+    <br/><br/>
     
     <p>
     <h3 title='Merge feeds from multiple social networks'><A href='/socialist'>jQuery Socialist</a></h3>
