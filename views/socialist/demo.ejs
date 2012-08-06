@@ -38,8 +38,7 @@ $('#social').click(function(){
             {name:'facebook',id:'in1dotcom'},
             {name:'twitter',id:'in1dotcom'}
         ],
-        maxResults:3,
-        theme:'clean'
+        maxResults:3
     });
     return false;
 });
@@ -132,6 +131,22 @@ Use it to pull content from Facebook pages, Twitter, LinkedIn, YouTube and other
 <br/><br/>
 
 <h2 id="basic">Combine Content from Multiple Social Media Feeds</h2>
+<pre>
+    $('#mydiv').socialist({
+    networks: [
+            {name:'facebook',id:'in1dotcom'},
+            {name:'tumblr',id:'in1blog'},
+            {name:'twitter',id:'in1_'},
+            {name:'pinterest',id:'potterybarn/Fall-Weddings-by-Pottery-Barn'},
+            {name:'youtube',id:'potterybarn'},
+            {name:'googleplus',id:'105588557807820541973/posts'},
+            {name:'rss',id:' http://feeds.feedburner.com/good/lbvp'}
+        ],
+        maxResults:4
+    });
+
+    &lt;div id="mydiv"&gt;&lt;/div&gt;
+</pre>
 <div id="demo1" class="collapse in"></div>
 <br/><br/>
 
@@ -142,26 +157,80 @@ Use it to pull content from Facebook pages, Twitter, LinkedIn, YouTube and other
 -->
 
 <h2 id="social" data-toggle="collapse" data-target="#demo3"><a href='#'>Combine Facebook, Twitter and LinkedIn Updates</a></h2>
+<pre>
+    $('#mydiv').socialist({
+        networks: [
+            {name:'linkedin',id:'buddy-media'},
+            {name:'facebook',id:'in1dotcom'},
+            {name:'twitter',id:'in1dotcom'}
+        ]
+    });
+</pre>
 <div id="demo3" class="collapse">
 </div>
 <br/><br/>
 
 <h2 id="youtube" data-toggle="collapse" data-target="#demo4"><a href='#'>Create a Wall of YouTube Video Thumbnails</a></h2>
+<pre>
+    $('#mydiv').socialist({
+        networks: [
+            {name:'youtube',id:'potterybarn'}
+        ],
+        theme:'clean'
+    });
+</pre>
 <div id="demo4" class="collapse"></div>
 <br/><br/>
 
 
 <h2 id="craigslist" data-toggle="collapse" data-target="#demo5"><a href='#'>Use Socialist as a jQuery Craigslist Plugin</a></h2>
+<pre>
+    $('#mydiv').socialist({
+        networks: [
+            {name:'craigslist',id:'boo',areaName:'boston'}
+        ],
+        maxResults:12
+    });
+</pre>
 <div id="demo5" class="collapse"></div>
 <br/><br/>
 
 
 <h2 id="rss" data-toggle="collapse" data-target="#demo6"><a href='#'>Use Socialist As a Visual RSS Plugin for jQuery</a></h2>
+<pre>
+    $('#mydiv').socialist({
+        networks: [
+            {name:'rss',id:' http://feeds.feedburner.com/good/lbvp'},
+        	{name:'rss',id:'http://www.houzz.com/getGalleries/featured/out-rss'}
+        ],
+    	maxResults:6
+    });
+</pre>
 <div id="demo6" class="collapse"></div>
 <br/><br/>
 
 
 <h2 id="list" data-toggle="collapse" data-target="#demo7"><a href='#'>Create a Customized List of Social Updates</a></h2>
+<pre>
+    $('#mydiv').socialist({
+        networks: [
+            {name:'tumblr',id:'iatek'},
+            {name:'youtube',id:'potterybarn'},
+            {name:'googleplus',id:'105588557807820541973/posts'},
+            {name:'rss',id:' http://feeds.feedburner.com/good/lbvp'}
+        ],
+        isotope:false,
+        random:false,
+        maxResults:2,
+        theme:'clean',
+        headingLength:60,
+        textLength:200,
+        width:280,
+        border:'1px',
+        margin:'2px',
+        fields:['text']
+    });
+</pre>
 <div id="demo7" class="collapse"></div>
 <br/><br/>
 
