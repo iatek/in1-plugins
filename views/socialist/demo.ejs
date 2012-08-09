@@ -32,6 +32,7 @@ $('#demo2').socialist({
 */
 
 $('.social').click(function(){
+    $('#demo3').empty();
     $('#demo3').socialist({
         networks: [
             {name:'linkedin',id:'buddy-media'},
@@ -67,6 +68,7 @@ $('.craigslist').click(function(){
 });
 
 $('.rss').click(function(){
+    $('#demo6').empty();
     $('#demo6').socialist({
         networks: [
             {name:'rss',id:' http://feeds.feedburner.com/good/lbvp'},
@@ -78,6 +80,7 @@ $('.rss').click(function(){
 });
 
 $('.list').click(function(){
+    $('#demo7').empty();
     $('#demo7').socialist({
         networks: [
             {name:'tumblr',id:'iatek'},
@@ -147,7 +150,7 @@ Use it to pull content from Facebook pages, Twitter, LinkedIn, YouTube and other
 
     &lt;div id="mydiv"&gt;&lt;/div&gt;
 </pre>
-<div id="demo1" class="collapse in"></div>
+<div id="demo1"></div>
 <br/><br/>
 
 <!--
@@ -156,7 +159,7 @@ Use it to pull content from Facebook pages, Twitter, LinkedIn, YouTube and other
 <br/><br/>
 -->
 
-<h2 class="social" data-toggle="collapse" data-target="#demo3"><a href='#'>Combine Facebook, Twitter and LinkedIn Updates</a></h2>
+<h2 class="social"><a href='#'>Combine Facebook, Twitter and LinkedIn Updates</a></h2>
 <pre>
     $('#mydiv').socialist({
         networks: [
@@ -166,8 +169,8 @@ Use it to pull content from Facebook pages, Twitter, LinkedIn, YouTube and other
         ]
     });
 </pre>
-<a class='social btn' href='#' data-toggle="collapse" data-target="#demo3">Try It</a>
-<div id="demo3" class="collapse">
+<a class='social btn' href='#'>Try It</a>
+<div id="demo3">
 </div>
 <br/><br/>
 
@@ -181,7 +184,7 @@ Use it to pull content from Facebook pages, Twitter, LinkedIn, YouTube and other
     });
 </pre>
 <a class='youtube btn' href='#'>Try It</a>
-<div id="demo4" class="collapse"></div>
+<div id="demo4"></div>
 <br/><br/>
 
 
@@ -195,7 +198,7 @@ Use it to pull content from Facebook pages, Twitter, LinkedIn, YouTube and other
     });
 </pre>
 <a class='craigslist btn' href='#'>Try It</a>
-<div id="demo5" class="collapse"></div>
+<div id="demo5"></div>
 <br/><br/>
 
 
@@ -210,11 +213,11 @@ Use it to pull content from Facebook pages, Twitter, LinkedIn, YouTube and other
     });
 </pre>
 <a class='rss btn' href='#'>Try It</a>
-<div id="demo6" class="collapse"></div>
+<div id="demo6"></div>
 <br/><br/>
 
 
-<h2 class="list" data-toggle="collapse" data-target="#demo7"><a href='#'>Create a Customized List of Social Updates</a></h2>
+<h2 class="list"><a href='#'>Create a Customized List of Social Updates</a></h2>
 <pre>
     $('#mydiv').socialist({
         networks: [
@@ -236,7 +239,7 @@ Use it to pull content from Facebook pages, Twitter, LinkedIn, YouTube and other
     });
 </pre>
 <a class='list btn' href='#'>Try It</a>
-<div id="demo7" class="collapse"></div>
+<div id="demo7"></div>
 <br/><br/>
 
 
