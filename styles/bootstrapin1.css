@@ -3,6 +3,27 @@
 		background-color: #efeff0;
 	}
 
+    #logo {
+		padding:2px;
+		padding-left:7px;
+		padding-right:7px;
+		color:#fff;
+		font: 19px 'Doppio One';
+		font-weight: 800;
+		background-color:#222;
+		border:1px solid #555;
+		border-top-color:#000;
+		border-left-color:#000;
+		border-radius:5px;
+		-moz-border-radius:5px;
+	}
+	#logo:hover {
+		background-color:#cc0000;
+		border-color:#660000;
+		border-top-color:#ff0000;
+		border-left-color:#ff0000;
+	}		
+
 	#footer * h3 {
 		color:#c9c9bb;
 		font-size:13pt;
