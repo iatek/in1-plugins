@@ -59,13 +59,14 @@
 .socialist .api {
     float:right;
     background-repeat:no-repeat;
-    height:32px;
-    width:32px;
+    *height:32px;
+    *width:32px;
 } 
 
 .socialist .api a {
     height:32px;
     width:32px;
+    display:block;
 }  
 
 .socialist .date {
