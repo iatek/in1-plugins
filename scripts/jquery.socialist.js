@@ -54,6 +54,8 @@
                         if (settings.isotope) {
                             $element.imagesLoaded(function(){
                                 //console.log("loading iso");
+                                 $element.removeClass('socialist-loader');
+                                
                                 $element.isotope ({
                                      animationEngine: 'jquery'
                                 });
@@ -62,7 +64,6 @@
                                     $element.isotope( 'shuffle', function(){} );
                                 }
                                 
-                                $element.removeClass('socialist-loader');
                             });
                         }
                         else {
