@@ -30,6 +30,138 @@
 </head>
 <body>
     <div class="container container-fluid">
+        <div class="btn-toolbar container">
+			<div class="pull-left" style="margin-right:6px;padding:5px 5px 0px 0px;">
+			<a href='/' id='logo' title='in1'>IN1</a>
+			</div>
+			<div class="btn-group">
+				<ul class="nav nav-pills">
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" title='Popular topics'>
+							Categories
+						</a>
+						<ul class="dropdown-menu span3">
+							<li><a href='/technology'>Gadgets & Tech</a></li>
+							<li><a href='/business'>Business & Finance</a></li>
+							<li><a href='/home'>Home & Garden</a></li>
+							<li><a href='/entertainment'>Music & Entertainment</a></li>
+							<li><a href='/living'>Living, Family & Interests</a></li>
+							<li><a href='/sports'>Sports & Outdoors</a></li>
+							<li><a href='/fashion'>Fashion</a></li>
+							<li><a href='/categories'><strong>All Categories</strong>...</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" title='Keywords to watch and explore'>
+							Tags
+						</a>
+						<ul class="dropdown-menu span4">
+							<h3>&nbsp;</h3>
+							<div class="span4 input-append"> 
+								<h4>Tags</h4>
+								<input type="text" class="span2" id="exploretags" placeholder="{explore}"/><button class="btn" id="exploretagsBtn"><i class="icon-arrow-right"></i></button> <button class="btn" onclick="location.href='/tags'">All Tags</a>
+							</div>
+							<div class="well span3" title="Subscribe to tags of interest here"> 
+								<% if (user && user.tags) {%>
+								<h3>My Tags <% if (user && user.tags) {%><span id="tagsCount" class="badge badge-inverse count"><%=user.tags.length%></span><% } %></h3>
+									<% if (everyauth.user) { %>
+									<input type="text" class="tags" id="usertags" placeholder="{add a tag}" />
+									<% } %>
+								<% } else { %>
+									<a href='/login'>Sign-in to create tag subscriptions...</a>
+								<% } %>
+							</div>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" title='These are resources you have saved'>
+						Favorites <span id='savesHeart'></span>
+						</a>
+						<ul class="dropdown-menu span5">
+							<h3>&nbsp;</h3>
+							<div class="span4 input-append"> 
+								<h4>Search Saves <% if (user && user.saves) {%><span id="saveCount" class="badge badge-inverse count"><%=user.saves.length%></span><% } %></h4>
+								<input type="text" class="span2" id="findsaves" placeholder="{search}"/><button class="btn" id="findsavesBtn"><i class="icon-arrow-right"></i></button> <button class="btn" onclick="location.href='/users/boards/edit'">My Saves</a>
+							</div>
+							<div class="well span4" title="These are your recent saves...">
+								<% if (!user || typeof user==="undefined") { %>
+									<a href='/login'>Sign-in to remember your favorites...</a>
+								<% } %>
+								<div id="usersaves"></div>
+							</div>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" href="/boards" id="topBtn" title='See what others have organized and shared'>
+						Collections
+						</a>
+					</li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" href="#" id="postBtn" title='Post Web pages, images, or upload your own. Post to in1, or share to social networks.'>
+						Post
+						</a>				
+					</li>
+				</ul>
+			</div>
+			<div class="btn-group pull-right">
+				<ul class="nav nav-pills">
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="loginBtn" title="<% if (everyauth.user) { %>You are logged in as:<%=user.login%><% }else{%>Let me in!<%}%>">
+							<% if (everyauth.user) { %><%=user.login%><% } else { %>Sign-in<% } %>
+						</a>
+						
+						<% if (!everyauth.user) {%>
+						<ul class="dropdown-menu span4" id="loginForm">
+							<li>
+							<h3>&nbsp;</h3>
+							
+							<div class="span3 well">
+								Connect using...<br/>
+								<div>	
+								<button onclick="location.href='/auth/twitter'" class="btn btn-tw" title="You define what gets posted to Twitter. Change your preferences at anytime.">Twitter</button>
+								<button onclick="location.href='/auth/facebook'" class="btn btn-fb" title="We only share what you choose to share. You define what gets posted to Facebook.">Facebook</button>
+								<button onclick="location.href='/auth/linkedin'" class="btn btn-li" title="We only share what you choose to LinkedIn. You define what gets posted to LinkedIn.">LinkedIn</button>
+								<button onclick="location.href='/login'" class="btn" title="More connect options...">+</button>
+								</div>	
+							</div>	
+							<form class="span3 well" action="/login" method="POST">
+								<label>Sign-in with in1</label>
+								<input class="span3" name="login" id="login" type="text" placeholder="Username" />
+								<input class="span3" name="password" id="password" type="password" placeholder="Password" />
+								<input type="button" onclick="location.href='/register'" class="btn btn-large pull-left" value="New User?"/>
+								<input type="submit" class="btn btn-success btn-large pull-right" value="Login"/>
+							</form>
+							<div class="btn-group span3 well" style="white-space:nowrap">
+								<a href='/help' class='btn'>Help | What's my password?</a>
+							</div>
+							</li>
+						</ul>
+						<% } else { %>
+						<ul class="dropdown-menu span3" id="loginForm">
+							<li><a href='/logout'>Logout '<%=everyauth.user.login%>'</a></li>
+							<li><% if (everyauth.facebook && everyauth.facebook.user) { %><a href='http://facebook.com'>Facebook connected as '<%=(everyauth.facebook.user.name).substring(0,13)%>..'</a><% } else { %><a href='/auth/facebook'>Facebook connect..</a><%}%></li>
+							<li><% if (everyauth.twitter && everyauth.twitter.user) { %><a href='http://twitter.com'>Twitter connected as '<%=everyauth.twitter.user.screen_name%>'</a><% } else { %><a href='/auth/twitter'>Twitter connect..</a><%}%></li>
+							<li><% if (everyauth.linkedin && everyauth.linkedin.user) { %><a href='http://linkedin.com'>LinkedIn connected as '<%=everyauth.linkedin.user.firstName%> <%=everyauth.linkedin.user.lastName%>'</a><% } else { %><a href='/auth/linkedin'>LinkedIn connect..</a><%}%></li>
+							<li><% if (everyauth.tumblr && everyauth.tumblr.user) { %><a href='http://tumblr.com'>Tumblr connected as '<%=everyauth.tumblr.user.name%>'</a><% } else { %><a href='/auth/tumblr'>Tumblr connect..</a><%}%></li>
+							<li><hr></li>
+							<li><a href='/users/<%=everyauth.user.login%>' title='View or manage your profile'>Profile</a></li>
+							<li><a href='/users/edit' title='Manage your user settings'>Settings</a></li>
+							<li><a href='/users/edit#saves' title='View or manage your saves'>Favorites</a></li>
+							<li><a href='/users/boards/edit' title='View or manage your collections'>Collections</a></li>
+							<li><a href='/help' title='Get help and support'>Help</a></li>
+						</ul>
+						<% } %>
+					</li>
+					<li class="input-append" style="padding:3px;padding-right:0px;">
+						<input type="text" class="span2" placeholder="{enter keywords here}" id="keywords" tabindex="0"/><button class="btn" id="searchBtn">Search</button>
+					</li>
+				</ul>
+			</div>
+		</div>
+    </div>
+
+    <div class="container container-fluid">
         <a href='http://plugins.in1.com'>plugins.in1</a>
         <%- body %>
         <hr/>
