@@ -41,14 +41,14 @@
 							Categories
 						</a>
 						<ul class="dropdown-menu span3">
-							<li><a href='/technology'>Gadgets & Tech</a></li>
-							<li><a href='/business'>Business & Finance</a></li>
-							<li><a href='/home'>Home & Garden</a></li>
-							<li><a href='/entertainment'>Music & Entertainment</a></li>
-							<li><a href='/living'>Living, Family & Interests</a></li>
-							<li><a href='/sports'>Sports & Outdoors</a></li>
-							<li><a href='/fashion'>Fashion</a></li>
-							<li><a href='/categories'><strong>All Categories</strong>...</a></li>
+							<li><a href='http://in1.com/technology'>Gadgets & Tech</a></li>
+							<li><a href='http://in1.com/business'>Business & Finance</a></li>
+							<li><a href='http://in1.com/home'>Home & Garden</a></li>
+							<li><a href='http://in1.com/entertainment'>Music & Entertainment</a></li>
+							<li><a href='http://in1.com/living'>Living, Family & Interests</a></li>
+							<li><a href='http://in1.com/sports'>Sports & Outdoors</a></li>
+							<li><a href='http://in1.com/fashion'>Fashion</a></li>
+							<li><a href='http://in1.com/categories'><strong>All Categories</strong>...</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
@@ -57,51 +57,9 @@
 						</a>
 						<ul class="dropdown-menu span4">
 							<h3>&nbsp;</h3>
-							<div class="span4 input-append"> 
-								<h4>Tags</h4>
-								<input type="text" class="span2" id="exploretags" placeholder="{explore}"/><button class="btn" id="exploretagsBtn"><i class="icon-arrow-right"></i></button> <button class="btn" onclick="location.href='/tags'">All Tags</a>
-							</div>
-							<div class="well span3" title="Subscribe to tags of interest here"> 
-								<% if (user && user.tags) {%>
-								<h3>My Tags <% if (user && user.tags) {%><span id="tagsCount" class="badge badge-inverse count"><%=user.tags.length%></span><% } %></h3>
-									<% if (everyauth.user) { %>
-									<input type="text" class="tags" id="usertags" placeholder="{add a tag}" />
-									<% } %>
-								<% } else { %>
-									<a href='/login'>Sign-in to create tag subscriptions...</a>
-								<% } %>
-							</div>
-							</li>
 						</ul>
 					</li>
-					<li class="dropdown">
-						<a class="dropdown-toggle" data-toggle="dropdown" href="#" title='These are resources you have saved'>
-						Favorites <span id='savesHeart'></span>
-						</a>
-						<ul class="dropdown-menu span5">
-							<h3>&nbsp;</h3>
-							<div class="span4 input-append"> 
-								<h4>Search Saves <% if (user && user.saves) {%><span id="saveCount" class="badge badge-inverse count"><%=user.saves.length%></span><% } %></h4>
-								<input type="text" class="span2" id="findsaves" placeholder="{search}"/><button class="btn" id="findsavesBtn"><i class="icon-arrow-right"></i></button> <button class="btn" onclick="location.href='/users/boards/edit'">My Saves</a>
-							</div>
-							<div class="well span4" title="These are your recent saves...">
-								<% if (!user || typeof user==="undefined") { %>
-									<a href='/login'>Sign-in to remember your favorites...</a>
-								<% } %>
-								<div id="usersaves"></div>
-							</div>
-						</ul>
-					</li>
-					<li class="dropdown">
-						<a class="dropdown-toggle" href="/boards" id="topBtn" title='See what others have organized and shared'>
-						Collections
-						</a>
-					</li>
-					<li class="dropdown">
-						<a class="dropdown-toggle" href="#" id="postBtn" title='Post Web pages, images, or upload your own. Post to in1, or share to social networks.'>
-						Post
-						</a>				
-					</li>
+					
 				</ul>
 			</div>
 			<div class="btn-group pull-right">
