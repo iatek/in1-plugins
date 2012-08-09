@@ -254,6 +254,8 @@
 }  
 
 .socialist-loader {
+    min-width:120px;
+    min-height:120px;
     background-image:url('images/ajax-loader.gif');
     background-repeat:no-repeat;
 }
