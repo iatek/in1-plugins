@@ -235,7 +235,7 @@
                     $sourceLnk = $('<a href="'+itemObj.img.href+'" title="'+itemObj.link.title+'"></a>'),
                     $sourceLnkDiv = $('<div/>'),
                     $apiSpan = $('<div class="api"></div>'),
-                    $apiSpanLnk = $('<a href="'+itemObj.img.href+'">&nbsp;</a>'),
+                    $apiSpanLnk = $('<a href="'+itemObj.img.href+'"></a>'),
                     $contentDiv = $('<div class="content"/>'),
                     $contentDivInner = $('<div>'+itemObj.txt+' </div>'),
                     $imgLnk = $('<a href="'+itemObj.img.href+'" title="'+itemObj.link.title+'"></a>'),
