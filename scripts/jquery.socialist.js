@@ -58,11 +58,11 @@
                                      animationEngine: 'jquery'
                                 });
                                 
-                                 $element.removeClass('socialist-loader');
-                                
                                 if (settings.random){
                                     $element.isotope( 'shuffle', function(){} );
                                 }
+                                
+                                $element.removeClass('socialist-loader');
                             });
                         }
                         else {
