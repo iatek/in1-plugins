@@ -2,7 +2,7 @@
  * jQuery.socialist - social media plugin
  * ---
  * @author Carol Skelly (http://iatek.com)
- * @version 0.1
+ * @version 1.0
  * ---
  */
 
@@ -25,9 +25,8 @@
                         visible = $element.is(":visible"),
                         element = this;
                     
-                    if (visible) {
-                        $element.hide();
-                    }
+                    // display loader
+                    $element.addClass('socialist-loader');
                     
                     // loop each network
                     networks.forEach(function(item) {
@@ -58,18 +57,16 @@
                                 $element.isotope ({
                                      animationEngine: 'jquery'
                                 });
-                                if (visible && settings.autoShow) {
-                                    $element.show();
-                                }
+                                
+                                 $element.removeClass('socialist-loader');
+                                
                                 if (settings.random){
                                     $element.isotope( 'shuffle', function(){} );
                                 }
                             });
                         }
                         else {
-                            if (visible) {
-                                $element.show();
-                            }
+                            $element.removeClass('socialist-loader');
                         }
                         
                     },function(){
@@ -237,7 +234,7 @@
                     $sourceLnk = $('<a href="'+itemObj.img.href+'" title="'+itemObj.link.title+'"></a>'),
                     $sourceLnkDiv = $('<div/>'),
                     $apiSpan = $('<div class="api"></div>'),
-                    $apiSpanLnk = $('<a href="'+itemObj.img.href+'"><img src="https://c9.io/skelly/jquery-socialist/workspace/images/spacer.gif"></a>'),
+                    $apiSpanLnk = $('<a href="'+itemObj.img.href+'"><img src="images/spacer.gif"></a>'),
                     $contentDiv = $('<div class="content"/>'),
                     $contentDivInner = $('<div>'+itemObj.txt+' </div>'),
                     $imgLnk = $('<a href="'+itemObj.img.href+'" title="'+itemObj.link.title+'"></a>'),
