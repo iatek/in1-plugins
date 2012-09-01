@@ -31,7 +31,7 @@
                     
                     if (settings.feed) {
                         processList.push(helpers.doRequest(settings.feed,"json",function(q){
-        					var container=$('<div></div>');
+        			        var container=$('<div></div>');
 							q.data.forEach(function(item) {
 								var $div = $('<div class="socialist"></div>');
 								$div.addClass('socialist-'+item.api);
