@@ -39,7 +39,7 @@
 								$div.appendTo(container);
 							});
 							queue.push(container);
-						},null,settings))
+						},null,settings));
                     }
                     else {
                         // loop each network
