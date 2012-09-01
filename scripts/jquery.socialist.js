@@ -55,7 +55,7 @@
                             reqUrl = reqUrl.replace("|num|",settings.maxResults);
                             // add to array for processing
                             processList.push(helpers.doRequest(reqUrl,nw.dataType,nw.cb,nw.parser,settings));
-                        });
+                        }
                     }
                     
                     // process the array of requests, then add resulting elements to container element
